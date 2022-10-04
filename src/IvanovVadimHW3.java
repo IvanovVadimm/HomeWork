@@ -98,8 +98,7 @@ public class IvanovVadimHW3 {
 
         int sumZeroNumbers = 0;
 
-        for (
-                int number : array) {
+        for (int number : array) {
             if (number == 0) {
                 sumZeroNumbers++;
             }
