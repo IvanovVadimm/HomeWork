@@ -35,6 +35,7 @@ public class IvanovVadimHW4 {
             System.out.println();
         }
         System.out.println("Number's sum from array: " + sum);
+        System.out.println();
 
 
         /**     Additional Task     **/
