@@ -15,23 +15,25 @@ public class IvanovVadimHW4 {
         Random random = new Random();
 
         int[][] array = new int[3][3];
-        int sum = 0;
 
-        System.out.println("Двумерный массив размером 3х3: ");
+
+        System.out.println("The 2D 3x3 array: ");
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = random.nextInt(10);
+                array[i][j] = random.nextInt(15);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
 
-        System.out.print("Введите число, на которое увеличится каждый элемент массива: ");
+        System.out.println("Enter the number which each array's numbers are increment: ");
         int customerNum = scanner.nextInt();
         System.out.println();
 
-        System.out.println("Двумерный массив 3х3, каждый элемент которого увеличен на "+customerNum+" ");
+        System.out.println("The 2D array 3x3, each array's numbers incremented for " + customerNum + " ");
+
+        int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -41,7 +43,7 @@ public class IvanovVadimHW4 {
             }
             System.out.println();
         }
-        System.out.println("Number's sum from array: " + sum);
+        System.out.println("Number's sum from the array: " + sum);
         System.out.println();
 
 
@@ -54,7 +56,7 @@ public class IvanovVadimHW4 {
         char whiteCell = 'W';
         char blackCell = 'B';
 
-        System.out.println("Шахматная доска: ");
+        System.out.println("The Chess table: ");
 
         for (int i = 0; i < array1.length; i++) {
             for (int j = 0; j < array1[i].length; j++) {
@@ -75,33 +77,48 @@ public class IvanovVadimHW4 {
             System.out.println();
         }
 
-        //Костыль, но работает!!! Наверное, можно лучше.
+        //Первое задание из телеги
+
+        /*На вход поступает массив разных чисел из N элементов в диапазоне [0,N],
+        Вернуть единственное число в диапазоне, которое отсутствует в массиве.*/
+
+        //Костыль, но работает. Наверное, можно лучше.
 
         int[] array5 = new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1};
 
-        System.out.println("Исходный массив: ");
+        System.out.println("The source array: ");
 
-        for (int num: array5) {
-            System.out.print(num+" ");
+        for (int num : array5) {
+            System.out.print(num + " ");
         }
+        System.out.println();
 
         Arrays.sort(array5);
 
-        //[0 1 2 4]
-        //[0 1]
-        System.out.println("Пропущенное число из возрастающего множества чисел массива: ");
+        System.out.println("Missed number from ascending sequence of array's numbers: ");
 
         for (int i = 0; i < array5.length - 1; i++) {
+            if(array5.length == 2){
+                System.out.println(array5[i+1]+1);
+                break;
+            }
             if (array5[i + 1] - array5[i] != 1) {
                 System.out.println(array5[i] + 1);
             }
         }
-        if (array5.length <= 2) {
-            System.out.println(array5[1] + 1);
-        }
 
         // Второе задание из телеги
-        System.out.println("Введите размерность массива - натуральное число больше 3: ");
+
+        /*1.Пользователь должен ввести с клавиатуры размер массива - натуральное число болше 3.
+        Введённое пользователем число сохраняеся в переменную n.
+        2. Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
+        3. Создать массив из n случайных чисел из отрезка [0,n] и вывести его на экран.
+        4. Создать второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран
+        */
+
+
+        System.out.println("Enter the dimension of the array - a natural number greater than 3: ");
+
         int n;
 
         do {
@@ -109,13 +126,13 @@ public class IvanovVadimHW4 {
             if (n > 3) {
                 break;
             } else {
-                System.out.println("Повторите ввод: ");
+                System.out.println("Retype: ");
             }
         } while (true);
 
         int[] array3 = new int[n];
 
-        System.out.println("Массив случайных чисел: ");
+        System.out.println("The Array3 of random numbers: ");
 
         for (int i = 0; i < array3.length; i++) {
             array3[i] = random.nextInt(n);
@@ -123,7 +140,7 @@ public class IvanovVadimHW4 {
         }
         System.out.println();
 
-        int sumEvenNum = 0;
+        int sumEvenNum = 0; // считает количество чётных чисел в массиве
 
         for (int num : array3) {
             if (num % 2 == 0) {
@@ -136,7 +153,7 @@ public class IvanovVadimHW4 {
         sumEvenNum = 0;
 
         if (array3Copy.length == 0) {
-            System.out.println("Массив array3Copy пуст. Чётных чисел в массиве array3 не было. ");
+            System.out.println("Array array3Copy is empty. Even numbers isn't in array3.");
         } else {
             for (int i = 0; i < array3.length; i++) {
 
@@ -146,7 +163,8 @@ public class IvanovVadimHW4 {
 
                 }
             }
-            System.out.println("Массив, состоящий из чётных чисел массива array3: ");
+
+            System.out.println("Array of  even numbers from array3: ");
             for (int num : array3Copy) {
                 System.out.print(num + " ");
             }
