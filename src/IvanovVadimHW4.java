@@ -14,15 +14,15 @@ public class IvanovVadimHW4 {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        int[][] array = new int[3][3];
+        int[][] arrayFromGeneralTask = new int[3][3];
 
 
         System.out.println("The 2D 3x3 array: ");
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = random.nextInt(15);
-                System.out.print(array[i][j] + " ");
+        for (int i = 0; i < arrayFromGeneralTask.length; i++) {
+            for (int j = 0; j < arrayFromGeneralTask[i].length; j++) {
+                arrayFromGeneralTask[i][j] = random.nextInt(15);
+                System.out.print(arrayFromGeneralTask[i][j] + " ");
             }
             System.out.println();
         }
@@ -35,11 +35,11 @@ public class IvanovVadimHW4 {
 
         int sum = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = array[i][j] + customerNum;
-                System.out.print(array[i][j] + " ");
-                sum = sum + array[i][j];
+        for (int i = 0; i < arrayFromGeneralTask.length; i++) {
+            for (int j = 0; j < arrayFromGeneralTask[i].length; j++) {
+                arrayFromGeneralTask[i][j] = arrayFromGeneralTask[i][j] + customerNum;
+                System.out.print(arrayFromGeneralTask[i][j] + " ");
+                sum = sum + arrayFromGeneralTask[i][j];
             }
             System.out.println();
         }
@@ -51,15 +51,15 @@ public class IvanovVadimHW4 {
         // Вывести шахматную доску
 
 
-        int[][] array1 = new int[8][8];
+        int[][] arrayFromAdditionalTask = new int[8][8];
 
         char whiteCell = 'W';
         char blackCell = 'B';
 
         System.out.println("The Chess table: ");
 
-        for (int i = 0; i < array1.length; i++) {
-            for (int j = 0; j < array1[i].length; j++) {
+        for (int i = 0; i < arrayFromAdditionalTask.length; i++) {
+            for (int j = 0; j < arrayFromAdditionalTask[i].length; j++) {
                 if (i % 2 == 0) {
                     if ((i + j) % 2 == 0) {
                         System.out.print(whiteCell + " ");
@@ -76,36 +76,25 @@ public class IvanovVadimHW4 {
             }
             System.out.println();
         }
+        System.out.println();
 
         //Первое задание из телеги
 
         /*На вход поступает массив разных чисел из N элементов в диапазоне [0,N],
         Вернуть единственное число в диапазоне, которое отсутствует в массиве.*/
 
-        //Костыль, как мне кажется, но работает)) Наверное, можно лучше реализовать.
+        int[] arrayFromFirstTelegramTask = {0, 1, 3, 4};
 
-        int[] array5 = new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1};
+        Arrays.sort(arrayFromFirstTelegramTask);
 
-        System.out.println("The source array: ");
+        for (int i = 0; i <= arrayFromFirstTelegramTask.length; i++) {
+            int indexNum = Arrays.binarySearch(arrayFromFirstTelegramTask, i);
 
-        for (int num : array5) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-
-        Arrays.sort(array5);
-
-        System.out.println("Missed number from ascending sequence of array's numbers: ");
-
-        for (int i = 0; i < array5.length - 1; i++) {
-            if(array5.length == 2){
-                System.out.println(array5[i+1]+1);
-                break;
-            }
-            if (array5[i + 1] - array5[i] != 1) {
-                System.out.println(array5[i] + 1);
+            if (indexNum < 0) {
+                System.out.println("Missed num from the array " + Arrays.toString(arrayFromFirstTelegramTask) + " is " + i);
             }
         }
+
 
         // Второе задание из телеги
 
@@ -130,42 +119,42 @@ public class IvanovVadimHW4 {
             }
         } while (true);
 
-        int[] array3 = new int[n];
+        int[] arrayFromSecondTelegramTask = new int[n];
 
         System.out.println("The Array3 of random numbers: ");
 
-        for (int i = 0; i < array3.length; i++) {
-            array3[i] = random.nextInt(n);
-            System.out.print(array3[i] + " ");
+        for (int i = 0; i < arrayFromSecondTelegramTask.length; i++) {
+            arrayFromSecondTelegramTask[i] = random.nextInt(n);
+            System.out.print(arrayFromSecondTelegramTask[i] + " ");
         }
         System.out.println();
 
         int sumEvenNum = 0; // считает количество чётных чисел в массиве
 
-        for (int num : array3) {
+        for (int num : arrayFromSecondTelegramTask) {
             if (num % 2 == 0) {
                 sumEvenNum++;
             }
         }
 
-        int[] array3Copy = new int[sumEvenNum];
+        int[] arrayCopyFromArraySecondTelegramTask = new int[sumEvenNum];
 
         sumEvenNum = 0;
 
-        if (array3Copy.length == 0) {
-            System.out.println("Array array3Copy is empty. Even numbers isn't in array3.");
+        if (arrayCopyFromArraySecondTelegramTask.length == 0) {
+            System.out.println("Array arrayCopy is empty. There isn't even numbers in array.");
         } else {
-            for (int i = 0; i < array3.length; i++) {
+            for (int i = 0; i < arrayFromSecondTelegramTask.length; i++) {
 
-                if (array3[i] % 2 == 0) {
-                    array3Copy[sumEvenNum] = array3[i];
+                if (arrayFromSecondTelegramTask[i] % 2 == 0) {
+                    arrayCopyFromArraySecondTelegramTask[sumEvenNum] = arrayFromSecondTelegramTask[i];
                     sumEvenNum++;
 
                 }
             }
 
             System.out.println("Array of  even numbers from array3: ");
-            for (int num : array3Copy) {
+            for (int num : arrayCopyFromArraySecondTelegramTask) {
                 System.out.print(num + " ");
             }
         }
