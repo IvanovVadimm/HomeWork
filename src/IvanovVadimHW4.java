@@ -53,8 +53,8 @@ public class IvanovVadimHW4 {
 
         int[][] arrayFromAdditionalTask = new int[8][8];
 
-        char whiteCell = 'W';
-        char blackCell = 'B';
+        String whiteCell = "W";
+        String blackCell = "B";
 
         System.out.println("The Chess table: ");
 
