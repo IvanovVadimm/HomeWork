@@ -51,7 +51,7 @@ public class IvanovVadimHW4 {
         // Вывести шахматную доску
 
 
-        int[][] arrayFromAdditionalTask = new int[8][8];
+        String[][] arrayFromAdditionalTask = new String[8][8];
 
         String whiteCell = "W";
         String blackCell = "B";
