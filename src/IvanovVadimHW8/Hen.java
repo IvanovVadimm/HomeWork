@@ -19,6 +19,6 @@ public abstract class Hen {
     }
 
     public static void getEggsInYear() {
-        System.out.println("All of Hens give " + countEggsInYear+" eggs");
+        System.out.println("All Hens give " + countEggsInYear+" eggs");
     }
 }
