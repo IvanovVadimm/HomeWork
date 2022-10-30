@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_2 {
 
     /*
-    Ввести 3 строки с консоли. Упорядочить и вывести строки в порядке возрастния значений их длины.
+    Ввести 3 строки с консоли. Упорядочить и вывести строки в порядке возрастания значений их длины.
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -26,6 +26,7 @@ public class Task_2 {
                 strings[i] = strings[i + 1];
                 strings[i + 1] = bufferString;
             }
+
         }
 
         for (String string : strings
