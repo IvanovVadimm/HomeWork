@@ -19,14 +19,14 @@ public class Task_2 {
 
         String firstStringWithSmallWidth = strings[0];
         String bufferString;
-
-        for (int i = 0; i < strings.length - 1; i++) {
-            if (firstStringWithSmallWidth.length() > strings[i + 1].length()) {
-                bufferString = strings[i];
-                strings[i] = strings[i + 1];
-                strings[i + 1] = bufferString;
+        for (int i = 0; i < strings.length; i++) {
+            for (int k = 0; k < strings.length - 1; k++) {
+                if ((Math.min(strings[k].length(), strings[k + 1].length())) == strings[k + 1].length()) {
+                    bufferString = strings[k];
+                    strings[k] = strings[k + 1];
+                    strings[k + 1] = bufferString;
+                }
             }
-
         }
 
         for (String string : strings
