@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task_2 {
-
     /*
     Ввести 3 строки с консоли. Упорядочить и вывести строки в порядке возрастания значений их длины.
      */
@@ -30,10 +29,8 @@ public class Task_2 {
             }
         }
 
-        for (String string : strings
-        ) {
+        for (String string : strings) {
             System.out.println(string + " ");
-
         }
     }
 }

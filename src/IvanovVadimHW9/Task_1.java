@@ -3,8 +3,6 @@ package IvanovVadimHW9;
 import java.util.Scanner;
 
 public class Task_1 {
-
-
     /*
     Ввести 3 строки с консоли, найти самую короткую и самую длинную строки. Вывести найденные строки и их длину
      */
@@ -42,6 +40,5 @@ public class Task_1 {
                 System.out.println("The longest string: " + string);
             }
         }
-
     }
 }

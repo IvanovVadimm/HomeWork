@@ -6,7 +6,6 @@ public class Task_3 {
     /*
     Ввести 3 строки с консоли. Вывести на консоль те строки, длина которых меньше средней, а также их длину
      */
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int lengthArray = 3;

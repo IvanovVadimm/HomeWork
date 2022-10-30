@@ -6,7 +6,6 @@ public class Task_5 {
     /*
     Ввести 3 строки с консоли. Среди слов состоящих только из цифр, найти слово палидром
      */
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -20,14 +19,16 @@ public class Task_5 {
         for (String string : strings) {
             int validateNum = 0;
             char[] chars = string.toCharArray();
-            for (int i = 1; i <= chars.length / 2; i++) {
-                if (chars[i - 1] == chars[chars.length - i]) {
+            for (int i = 0; i < chars.length / 2; i++) {
+                if (chars[i] == chars[chars.length - i-1]) {
                     validateNum++;
                 }
             }
             if (validateNum == (string.length()) / 2) {
-                System.out.println(string);
+                System.out.println("Palindrome word "+string);
+                break;
             }
+
         }
     }
 }
