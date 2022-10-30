@@ -19,6 +19,7 @@ public class Task_2 {
 
         String firstStringWithSmallWidth = strings[0];
         String bufferString;
+
         for (int i = 0; i < strings.length; i++) {
             for (int k = 0; k < strings.length - 1; k++) {
                 if ((Math.min(strings[k].length(), strings[k + 1].length())) == strings[k + 1].length()) {
