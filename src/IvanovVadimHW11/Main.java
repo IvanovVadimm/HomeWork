@@ -20,7 +20,7 @@ public class Main {
                 stringBuilder.append((char) i);
             }
 
-            String currentString = new String(stringBuilder);
+            String currentString = String.valueOf(stringBuilder);
             currentString = currentString.replace(".", "");
             currentString = currentString.replace(",", "");
             currentString = currentString.replace("[", "");
