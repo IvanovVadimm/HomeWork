@@ -15,7 +15,6 @@ public class LambdaTaskClass_8 {
             double dollarExchangeRate = 2.56;
             System.out.println(currentValueOfstringValue * dollarExchangeRate);
         };
-
         System.out.print("Сумма в долларах: ");
         lambda8.accept("78.26 BYN");
     }

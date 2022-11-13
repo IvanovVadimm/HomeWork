@@ -11,7 +11,6 @@ public class LambdaTaskClass_2 {
         Consumer<Box> lambda = (x) -> {
             System.out.println("Отгрузили ящик весом " + x.getWeight() + " кг");
         };
-
         lambda.accept(box);
     }
 }

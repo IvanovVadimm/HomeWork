@@ -13,7 +13,6 @@ public class LambdaTaskClass_1 {
             }
             return false;
         };
-
         System.out.println(lambda1.test("JA"));
         System.out.println(lambda1.test("asd"));
     }

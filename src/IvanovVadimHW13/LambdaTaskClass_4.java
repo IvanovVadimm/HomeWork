@@ -14,7 +14,6 @@ public class LambdaTaskClass_4 {
             Random random = new Random();
             return random.nextDouble() * 10;
         };
-
         System.out.println(lambda4.get());
     }
 }
