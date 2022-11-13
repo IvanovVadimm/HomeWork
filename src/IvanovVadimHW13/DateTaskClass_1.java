@@ -3,7 +3,9 @@ package IvanovVadimHW13;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
+/*
+Написать программу для вывода на консоль названия дня недели по введённой дате.
+ */
 public class DateTaskClass_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +22,7 @@ public class DateTaskClass_1 {
 
         String dateTimeLocal = localDate.format(formatter);
 
-        System.out.println("Полная введённая дата: "+dateTimeLocal);
+        System.out.println("Полная введённая дата: " + dateTimeLocal);
 
         System.out.println("День недели " + localDate.getDayOfWeek());
     }
