@@ -18,6 +18,7 @@ public class LambdaTaskClass_3 {
                 System.out.println("Ноль");
             }
         };
+
         lambda3.accept(3);
         lambda3.accept(-4);
         lambda3.accept(0);

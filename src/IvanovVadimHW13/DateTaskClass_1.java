@@ -17,13 +17,10 @@ public class DateTaskClass_1 {
         int year = scanner.nextInt();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
-
         LocalDate localDate = LocalDate.of(year, month, day);
-
         String dateTimeLocal = localDate.format(formatter);
 
         System.out.println("Полная введённая дата: " + dateTimeLocal);
-
         System.out.println("День недели " + localDate.getDayOfWeek());
     }
 }

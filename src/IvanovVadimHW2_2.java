@@ -75,5 +75,7 @@ public class IvanovVadimHW2_2 {
             num = num - 5;
         }
 
+        System.out.println("Test commit");
+
     }
 }
