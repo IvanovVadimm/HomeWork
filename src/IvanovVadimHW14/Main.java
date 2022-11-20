@@ -32,7 +32,7 @@ public class Main {
         int e = 9;
         int f = 13;
 
-        for (int i = 0; i < idNameMap.size(); i++) {
+        for (int i = 1; i < idNameMap.size(); i++) {
             Optional<StringBuilder> optionalOfName = Optional.ofNullable(idNameMap.get(i));
             if (optionalOfName.isPresent()) {
                 if ((i == a) || (i == b) || (i == c) || (i == d) || (i == e) || (i == f)) {
