@@ -21,10 +21,6 @@ public class FirstTaskFromHW {
 
         Matcher matcher = pattern.matcher(ipAddress);
 
-        if(!(matcher.matches())){
-            System.out.println("IP isn't correct");
-        } else {
-            System.out.println("Entering IP is: "+ipAddress);
-        }
+        System.out.println(!(matcher.matches()) ? "IP isn't correct" : "Entering IP is: " + ipAddress);
     }
 }
