@@ -12,7 +12,7 @@ public class User implements Cloneable {
 
     public User(String name) {
         this.name = name;
-        this.individualId = User.id++;
+        this.individualId = ++User.id;
     }
 
     public void setName(String name) {
@@ -31,7 +31,7 @@ public class User implements Cloneable {
     @Override
     public String toString() {
         return "Ползователь " +
-                "c id: " + id +
+                "c id: " + individualId +
                 ", именем: " + name +
                 ", дата рождения: " + birthDay;
     }
